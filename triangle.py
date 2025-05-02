@@ -1,5 +1,5 @@
 # 打印一个由星号组成的三角形
-# 打印一个由星号组成的三角形bbb
+# 打印一个由星号组成的三角形bbbzzz
 def print_triangle(rows):
     for i in range(1, rows + 1):
         print('*' * i)
