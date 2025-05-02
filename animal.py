@@ -1,5 +1,5 @@
 # 定义 Animal 类
-# add new code by kevin
+# add print by joe
 class Animal:
     def __init__(self, name):
         self.name = name

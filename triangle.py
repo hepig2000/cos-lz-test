@@ -7,3 +7,4 @@ def print_triangle(rows):
 # 输入三角形的行数
 num_rows = 5
 print_triangle(num_rows)
+print("OK")
