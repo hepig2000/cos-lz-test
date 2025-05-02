@@ -1,4 +1,5 @@
 # 定义 Animal 类
+# add new code by kevin
 class Animal:
     def __init__(self, name):
         self.name = name
@@ -22,3 +23,4 @@ if __name__ == "__main__":
     my_cat = Cat("Tom")
     # 打印输出
     print(my_cat.speak())
+    print("good")
