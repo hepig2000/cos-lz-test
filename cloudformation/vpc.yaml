@@ -1,13 +1,15 @@
 Resources:
-  EC2VPC:
-    UpdateReplacePolicy: Retain
+  lzVPC:
     Type: AWS::EC2::VPC
-    DeletionPolicy: Retain
     Properties:
-      CidrBlock: 10.0.0.0/15
+      CidrBlock: 10.0.0.0/16
       EnableDnsSupport: true
       InstanceTenancy: default
       EnableDnsHostnames: false
       Tags:
-        - Value: test-vpc
+        - Value: cos-lz-vpc
           Key: Name
+Outputs:
+  VPCID:
+    Description: The ID of the VPC
+    Value: !Ref lzVPC
