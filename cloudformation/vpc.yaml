@@ -9,7 +9,79 @@ Resources:
       Tags:
         - Value: cos-lz-vpc
           Key: Name
+  publicSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref lzVPC
+      AvailabilityZoneId: use1-az1
+      CidrBlock: 10.0.100.0/24
+      Tags:
+        - Value: lz-vpc-public-subnet1
+          Key: Name
+  publicSubnet2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref lzVPC
+      AvailabilityZoneId: use1-az2
+      CidrBlock: 10.0.110.0/24
+      Tags:
+        - Value: lz-vpc-public-subnet2
+          Key: Name
+  publicSubnet3:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref lzVPC
+      AvailabilityZoneId: use1-az3
+      CidrBlock: 10.0.120.0/24
+      Tags:
+        - Value: lz-vpc-public-subnet3
+          Key: Name
+  privateSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref lzVPC
+      AvailabilityZoneId: use1-az1
+      CidrBlock: 10.0.200.0/24
+      Tags:
+        - Value: lz-vpc-private-subnet1
+          Key: Name
+  privateSubnet2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref lzVPC
+      AvailabilityZoneId: use1-az2
+      CidrBlock: 10.0.210.0/24
+      Tags:
+        - Value: lz-vpc-private-subnet2
+          Key: Name
+  privateSubnet3:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref lzVPC
+      AvailabilityZoneId: use1-az3
+      CidrBlock: 10.0.220.0/24
+      Tags:
+        - Value: lz-vpc-private-subnet3
+          Key: Name
 Outputs:
   VPCID:
     Description: The ID of the VPC
     Value: !Ref lzVPC
+  PublicSubnetID1:
+    Description: The ID of the public subnet1
+    Value: !Ref publicSubnet1
+  PublicSubnetID2:
+    Description: The ID of the public subnet2
+    Value: !Ref publicSubnet2
+  PublicSubnetID3:
+    Description: The ID of the public subnet3
+    Value: !Ref publicSubnet3
+  PrivateSubnetID1:
+    Description: The ID of the private subnet1
+    Value: !Ref privateSubnet1
+  PrivateSubnetID2:
+    Description: The ID of the private subnet2
+    Value: !Ref privateSubnet2
+  PrivateSubnetID3:
+    Description: The ID of the private subnet3
+    Value: !Ref privateSubnet3

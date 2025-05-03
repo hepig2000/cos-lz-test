@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.x  # 根据需要选择 Python 版本
+    commands:
+      - echo "Installing dependencies..."
+      - pip install -r requirements.txt  # 安装依赖
+  build:
+    commands:
+      - echo "Deploying with CDK..."
+      - cdk deploy --require-approval never  # 自动部署
+artifacts:
+  files:
+    - '**/*'
